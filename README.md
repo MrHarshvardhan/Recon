@@ -21,7 +21,7 @@ shodan search ssl.cert.subject.CN:"rapfame.app" 200 --fields ip_str | httx-toolk
 VirusTotal.com
 https://www.virustotal.com/vtapi/v2/domain/report?apikey=982680b1787fa59701919aa22515a025e00df1e3bb2bc4f186b8e919558d576c&domain=dell.com
 
-curl -s "https://www.virustotal.com/vtapi/v2/domain/report?domain=nasa.gov&apikey=982680b1787fa59701919aa22515a025e00df1e3bb2bc4f186b8e919558d576c" | jq -r '... | .ip_address? // empty' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
+curl -s "https://www.virustotal.com/vtapi/v2/domain/report?domain=nasa.gov&apikey=982680b1787fa59701919aa22515a025e00df1e3bb2bc4f186b8e919558d576c" | jq -r '.. | .ip_address? // empty' | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
 
 curl -s "https://www.virustotal.com/vtapi/v2/domain/report?apikey=982680b1787fa59701919aa22515a025e00df1e3bb2bc4f186b8e919558d576c&domain=www.nasa.gov" | jq -r '.domain_siblings[]'
 
