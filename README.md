@@ -16,7 +16,7 @@ Shodan favicon
 http.favicon.hash:126547436
 
 Shodan SSL CN search
-shodan search ssl.cert.subject.CN:"rapfame.app" 200 --fields ip_str | httx-toolkit -sc -title -server -td
+shodan search 'ssl.cert.subject.CN:"devicelock.com"' --fields ip_str | httpx-toolkit -sc -title -server -td
 
 VirusTotal.com
 https://www.virustotal.com/vtapi/v2/domain/report?apikey=982680b1787fa59701919aa22515a025e00df1e3bb2bc4f186b8e919558d576c&domain=dell.com
@@ -40,7 +40,7 @@ https://web.archive.org/cdx/search/cdx?url={DOMAIN}&fl=original&collapse=urlkey
 
 http.favicon.hash:126547436
 
-shodan search Ssl.cert.subject.CN:"rapfame.app" 200 --fields ip_str | httx-toolkit -sc -title -server -td
+shodan search 'ssl.cert.subject.CN:"devicelock.com"' --fields ip_str | httpx-toolkit -sc -title -server -td
 
 ```
 
